@@ -69,13 +69,31 @@ local setup = {
   },
 }
 
-local opts = {
+local leader_opts = {
   mode = "n", -- NORMAL mode
   prefix = "<leader>",
   buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
   silent = true, -- use `silent` when creating keymaps
   noremap = true, -- use `noremap` when creating keymaps
   nowait = true, -- use `nowait` when creating keymaps
+}
+
+local leader_visual_opts = {
+  mode = "v", -- Visual mode
+  prefix = "<leader>",
+  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true, -- use `silent` when creating keymaps
+  noremap = true, -- use `noremap` when creating keymaps
+  nowait = true, -- use `nowait` when creating keymaps
+}
+
+local opts = {
+  mode = "n",
+  prefix = nil,
+  buffer = nil,
+  slient = true,
+  noremap = false,
+  nowait = true,
 }
 
 local mappings = {
@@ -106,59 +124,63 @@ local mappings = {
   },
 
   g = {
-    name = "Git",
-    g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
-    j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
-    k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
-    l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
-    p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
-    r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
-    R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-    s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
-    u = {
-      "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
-      "Undo Stage Hunk",
-    },
-    o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
-    b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-    c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-    d = {
-      "<cmd>Gitsigns diffthis HEAD<cr>",
-      "Diff",
-    },
+      name = "Coc",
+      f = { "<Plug>(coc-format-selected)", "Format file" }
   },
+  --g = {
+  --  name = "Git",
+  --  g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+  --  j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
+  --  k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
+  --  l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
+  --  p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
+  --  r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
+  --  R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
+  --  s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+  --  u = {
+  --    "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
+  --    "Undo Stage Hunk",
+  --  },
+  --  o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
+  --  b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+  --  c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+  --  d = {
+  --    "<cmd>Gitsigns diffthis HEAD<cr>",
+  --    "Diff",
+  --  },
+  --},
 
-  l = {
-    name = "LSP",
-    a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-    d = {
-      "<cmd>Telescope lsp_document_diagnostics<cr>",
-      "Document Diagnostics",
-    },
-    w = {
-      "<cmd>Telescope lsp_workspace_diagnostics<cr>",
-      "Workspace Diagnostics",
-    },
-    f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
-    i = { "<cmd>LspInfo<cr>", "Info" },
-    I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
-    j = {
-      "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
-      "Next Diagnostic",
-    },
-    k = {
-      "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
-      "Prev Diagnostic",
-    },
-    l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
-    q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
-    r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-    s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-    S = {
-      "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-      "Workspace Symbols",
-    },
-  },
+  --l = {
+    -- name = "LSP",
+    -- a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+    -- d = {
+    --   "<cmd>Telescope lsp_document_diagnostics<cr>",
+    --   "Document Diagnostics",
+    -- },
+    -- w = {
+    --   "<cmd>Telescope lsp_workspace_diagnostics<cr>",
+    --   "Workspace Diagnostics",
+    -- },
+    -- f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+    -- i = { "<cmd>LspInfo<cr>", "Info" },
+    -- I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+    -- j = {
+    --   "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
+    --   "Next Diagnostic",
+    -- },
+    -- k = {
+    --   "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
+    --   "Prev Diagnostic",
+    -- },
+    -- l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
+    -- q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
+    -- r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+    -- s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
+    -- S = {
+    --   "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
+    --   "Workspace Symbols",
+    -- },
+  -- },
   s = {
     name = "Search",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
@@ -183,5 +205,26 @@ local mappings = {
   },
 }
 
+local pure_mappings = {
+  g = {
+    name = "Coc Analysis",
+    d = { "<Plug>(coc-definition)", "Goto Definition" },
+    D = { "<Plug>(coc-type-definition)", "Goto Type Definition" },
+    -- c = { "<Plug>(coc-declaration)", "Goto Declaration" },
+    C = { "<Plug>(coc-implementation)", "Goto Implementation" },
+    r = { "<Plug>(coc-references)", "Goto Reference" },
+    f = { "<cmd>Format<cr>", "Format" }
+  }
+}
+
+local visual_mappings = {
+  f = {
+    name = "Coc Analysis",
+    f = { "<Plug>(coc-format-selected)", "Format" }
+  }
+}
+
 which_key.setup(setup)
-which_key.register(mappings, opts)
+which_key.register(mappings, leader_opts)
+which_key.register(pure_mappings, opts)
+which_key.register(visual_mappings, leader_visual_opts)
