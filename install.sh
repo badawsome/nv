@@ -7,12 +7,12 @@ install_plugins() {
     bash <<EOF
 set -e
 pushd ~/
+    mkdir -p ~/.config/coc/extensions/node_modules/coc-ccls
+    ln -sf node_modules/ws/lib ~/.config/coc/extensions/node_modules/coc-ccls/lib
     echo "-- Start installing plugins"
     $VIMEXE --headless -c 'sleep 5' -c qa
     $VIMEXE --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
     $VIMEXE --headless -c 'sleep 10' -c 'CocUpdateSync' -c 'TSUpdateSync' -c qa 
-    mkdir -p ~/.config/coc/extensions/node_modules/coc-ccls
-    ln -sf node_modules/ws/lib ~/.config/coc/extensions/node_modules/coc-ccls/lib
     echo '-- Plugins installed successfully'
 popd
 EOF
