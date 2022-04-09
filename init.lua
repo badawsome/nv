@@ -1,7 +1,7 @@
-require "coc"
 require "options"
 require "keymaps"
 require "plugins"
+require "coc"
 require "colorscheme"
 require "cmp"
 require "treesitter"

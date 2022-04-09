@@ -40,6 +40,11 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
@@ -90,11 +95,6 @@ return packer.startup(function(use)
   -- Telescope
   use "nvim-telescope/telescope.nvim"
 
-  -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-  }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
