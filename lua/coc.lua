@@ -6,7 +6,7 @@ completion["neoclide/coc.nvim"] = {
   branch = "release",
   config = function()
     vim.api.nvim_exec(
-      [[source ~/.config/nvim/lua/user/coc.vim]],
+      [[source ~/.config/nvim/lua/coc.vim]],
       false)
   end
 }

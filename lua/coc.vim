@@ -138,4 +138,5 @@ let g:coc_global_extensions = [
       \'coc-db',
       \'coc-json',
       \'coc-yaml',
+      \'coc-clang-format-style-options',
       \]
