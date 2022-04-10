@@ -31,10 +31,10 @@ inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-xmap <leader>ca  <Plug>(coc-codeaction-selected)
-nmap <leader>ca  <Plug>(coc-codeaction-selected)
-nmap <leader>ac  <Plug>(coc-codeaction)
-nmap <leader>qf  <Plug>(coc-fix-current)
+"xmap <leader>ca  <Plug>(coc-codeaction-selected)
+"nmap <leader>ca  <Plug>(coc-codeaction-selected)
+"nmap <leader>ac  <Plug>(coc-codeaction)
+"nmap <leader>qf  <Plug>(coc-fix-current)
 
 "nmap gr <Plug>(coc-rename)
 "xmap gf <Plug>(coc-format-selected)

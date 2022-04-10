@@ -56,7 +56,7 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
-  use "akinsho/toggleterm.nvim"
+  -- use "akinsho/toggleterm.nvim"
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
@@ -94,8 +94,10 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
-
   use "JoosepAlviste/nvim-ts-context-commentstring"
+  -- use "mileszs/ack.vim"
+  -- use "rking/ag.vim"
+  -- use "ddrscott/vim-side-search"
 
   -- Git
   use "lewis6991/gitsigns.nvim"

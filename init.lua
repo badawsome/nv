@@ -19,6 +19,7 @@ require "alpha"
 require "whichkey"
 require "autocommands"
 require "asynctask"
+require "ag"
 
 vim.api.nvim_exec(
 [[source ~/.config/nvim/lua/coc.vim]],
