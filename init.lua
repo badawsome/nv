@@ -22,3 +22,7 @@ require "user/ag"
 vim.api.nvim_exec(
 [[source ~/.config/nvim/lua/user/coc.vim]],
 false)
+
+vim.api.nvim_exec(
+[[source ~/.config/nvim/lua/user/asynctask.vim]],
+false)

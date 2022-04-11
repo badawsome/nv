@@ -64,6 +64,10 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
   use {"neoclide/coc.nvim", branch = "release", run = "yarn install --frozen-lockfile"}
+  use {"antoinemadec/coc-fzf", branch = "release"}
+  use {"junegunn/fzf.vim"}
+  use {"junegunn/fzf", dir = "~/.local/share/nvim/fzf", run = "./install --all"}
+
   use "skywind3000/asynctasks.vim"
   use "skywind3000/asyncrun.vim"
   use "numToStr/FTerm.nvim"

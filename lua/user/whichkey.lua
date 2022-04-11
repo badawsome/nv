@@ -105,7 +105,7 @@ local mappings = {
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   -- ["w"] = { "<cmd>w!<CR>", "Save" },
   -- ["q"] = { "<cmd>q!<CR>", "Quit" },
-  ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+  ["q"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   -- ["f"] = {
   --   "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
@@ -123,9 +123,10 @@ local mappings = {
   --   u = { "<cmd>PackerUpdate<cr>", "Update" },
   -- },
 
-  g = {
-      name = "Coc",
-      f = { "<Plug>(coc-format-selected)", "Format file" }
+  ["c"] = {"<cmd>CocFzfList<cr>", "CocList"},
+  r = {
+      name = "Do Tasks",
+      r = { "<cmd>AsyncTaskFzf<cr>", "Select task" }
   },
   --g = {
   --  name = "Git",
@@ -206,7 +207,8 @@ local pure_mappings = {
     C = { "<Plug>(coc-implementation)", "Goto Implementation" },
     r = { "<Plug>(coc-references)", "Goto Reference" },
     f = { "<cmd>Format<cr>", "Format" }
-  }
+  },
+  ["t"] = {"<cmd>AsyncTaskFzf<cr>", "Async Task"}
 }
 
 local visual_mappings = {
