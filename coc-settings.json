@@ -3,7 +3,7 @@
         "ccls": {
             "command": "ccls",
             "filetypes": ["c", "cpp", "cc"],
-            "rootPatterns": [".git/", "build/", ".ccls-root"],
+            "rootPatterns": [".git/", "build/", ".ccls-root", "compile_commands.json"],
             "initializationOptions": {
                 "compilationDatabaseDirectory": "build",
                 "cache": {
