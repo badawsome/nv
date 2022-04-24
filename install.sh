@@ -12,7 +12,7 @@ pushd ~/
     $VIMEXE --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
     $VIMEXE --headless -c 'sleep 10' -c 'CocUpdateSync' -c 'TSUpdateSync' -c qa 
     echo '-- Plugins installed successfully'
-    mkdir -p ~/.config/coc/extensions/node_modules/coc-ccls
+    mkdir -p ~/.config/coc/extensions/node_modules/coc-ccls && cd ~/.config/coc/extensions/node_modules/coc-ccls
     ln -sf node_modules/ws/lib ~/.config/coc/extensions/node_modules/coc-ccls/lib
 popd
 EOF
