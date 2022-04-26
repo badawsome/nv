@@ -72,6 +72,7 @@ return packer.startup(function(use)
   use "skywind3000/asyncrun.vim"
   use "numToStr/FTerm.nvim"
   use "fatih/vim-go"
+  use "p00f/nvim-ts-rainbow"
   -- use "voldikss/vim-floaterm"
 
   -- Colorschemes

@@ -20,4 +20,9 @@ configs.setup {
     enable = true,
     enable_autocmd = false,
   },
+  rainbow = {
+      enable = true,
+      extend_mode = true,
+      max_file_lines = nil,
+  }
 }

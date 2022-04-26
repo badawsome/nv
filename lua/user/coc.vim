@@ -140,3 +140,4 @@ let g:coc_global_extensions = [
       \'coc-yaml',
       \'coc-clang-format-style-options',
       \]
+
