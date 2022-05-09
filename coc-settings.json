@@ -1,22 +1,5 @@
 {
     "languageserver": {
-        "ccls": {
-            "command": "ccls",
-            "filetypes": ["c", "cpp", "cc"],
-            "rootPatterns": [".git/", "build/", ".ccls-root", "compile_commands.json"],
-            "initializationOptions": {
-                "compilationDatabaseDirectory": "build",
-                "cache": {
-                    "directory": "/tmp/ccls"
-                },
-                "index": {
-                    "onChange": true
-                },
-                "highlight": {
-                    "lsRanges": true
-                }
-            }
-        },
         "cmake": {
             "command": "cmake-language-server",
             "filetypes": ["cmake"],

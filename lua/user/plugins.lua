@@ -52,7 +52,7 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"
-  use "kyazdani42/nvim-tree.lua"
+  use { "kyazdani42/nvim-tree.lua", commit = "ce463a5" }
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
@@ -67,6 +67,8 @@ return packer.startup(function(use)
   use {"antoinemadec/coc-fzf", branch = "release"}
   use {"junegunn/fzf.vim"}
   use {"junegunn/fzf", dir = "~/.local/share/nvim/fzf", run = "./install --all"}
+  use {"iamcco/markdown-preview.nvim", ft = 'markdown', run = "cd app && yarn install", cmd = 'MarkdownPreview'}
+  use 'liuchengxu/vista.vim'
 
   use "skywind3000/asynctasks.vim"
   use "skywind3000/asyncrun.vim"

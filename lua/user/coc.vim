@@ -127,7 +127,6 @@ let g:coc_global_extensions = [
       \'coc-eslint',
       \'coc-emmet',
       \'coc-vetur',
-      \'coc-ccls',
       \
       \'coc-clangd',
       \'coc-sumneko-lua',

@@ -125,8 +125,9 @@ local mappings = {
 
   ["c"] = {"<cmd>CocFzfList<cr>", "CocList"},
   r = {
-      name = "Do Tasks",
-      r = { "<cmd>AsyncTaskFzf<cr>", "Select task" }
+      name = "Tasks/Preview",
+      r = { "<cmd>AsyncTaskFzf<cr>", "Select task" },
+      m = { "<Plug>MarkdownPreview", "Preview markdown" },
   },
   --g = {
   --  name = "Git",

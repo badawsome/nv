@@ -18,6 +18,7 @@ require "user/whichkey"
 require "user/autocommands"
 require "user/asynctask"
 require "user/ag"
+require "user/outline"
 
 vim.api.nvim_exec(
 [[source ~/.config/nvim/lua/user/coc.vim]],
@@ -25,4 +26,8 @@ false)
 
 vim.api.nvim_exec(
 [[source ~/.config/nvim/lua/user/asynctask.vim]],
+false)
+
+vim.api.nvim_exec(
+[[source ~/.config/nvim/lua/user/markdown.vim]],
 false)
